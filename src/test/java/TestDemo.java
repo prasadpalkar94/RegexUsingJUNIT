@@ -14,4 +14,17 @@ public class TestDemo {
         Assert.assertFalse(b);
     }
 
+    @Test
+    public void whenGiven_Value_of_LastName_should_Return_True() {
+        boolean result = UserRegistration.checkLastName("Palkar");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenGiven_Value_of_LastName_should_Return_False() {
+        boolean b=UserRegistration.checkLastName("pAlkar");
+        Assert.assertFalse(b);
+    }
+
+
 }
