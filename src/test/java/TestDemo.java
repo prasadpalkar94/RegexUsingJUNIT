@@ -51,5 +51,18 @@ public class TestDemo {
         Assert.assertFalse(b);
     }
 
+    @Test
+    public void whenGiven_Value_of_Password1_should_Return_True() {
+        boolean result = UserRegistration.checkPassword("prasad@123");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenGiven_Value_of_Password1_should_Return_False() {
+        boolean b=UserRegistration.checkPassword("prasad@");
+        Assert.assertFalse(b);
+    }
+
+
 
 }
