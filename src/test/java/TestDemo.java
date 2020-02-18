@@ -39,5 +39,17 @@ public class TestDemo {
         Assert.assertFalse(b);
     }
 
+    @Test
+    public void whenGiven_Value_of_ContactNo_should_Return_True() {
+        boolean result = UserRegistration.checkContactNo("91 9123545670");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void whenGiven_Value_of_ContactNo_should_Return_False() {
+        boolean b=UserRegistration.checkContactNo("12 3156*789215");
+        Assert.assertFalse(b);
+    }
+
 
 }
