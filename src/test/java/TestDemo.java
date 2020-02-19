@@ -59,7 +59,7 @@ public class TestDemo {
 
     @Test
     public void whenGiven_Value_of_Password1_should_Return_False() {
-        boolean b=UserRegistration.checkPassword("prasad@");
+        boolean b=UserRegistration.checkPasswordWithExactOneSpecialCharacter("prasad@Pal12");
         Assert.assertFalse(b);
     }
 

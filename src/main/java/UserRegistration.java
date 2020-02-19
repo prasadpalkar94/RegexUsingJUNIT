@@ -5,6 +5,7 @@ public class UserRegistration {
     final static String EMAIL="^[a-zA-Z]*[-./+]?[0-9]*[@]{1}[a-z0-9]{3,}[.]{1}[a-z]{2,3}$";
     final static String MOBILENO="^[0-9]{2}[[:space:]]{1}[0-9]{10}$";
     final static String PASSWORD="^[0-9a-zA-Z@#$&-_]{8,}$";
+    final static String PASSWORD1="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
     public static boolean checkFirstName(String firstName) {
         Pattern pattern = Pattern.compile(NAME);
         Matcher matcher = pattern.matcher(firstName);
@@ -33,6 +34,12 @@ public class UserRegistration {
     public static boolean checkPassword(String password) {
         Pattern pattern = Pattern.compile(PASSWORD);
         Matcher matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
+
+    public static boolean checkPasswordWithExactOneSpecialCharacter(String password1) {
+        Pattern pattern = Pattern.compile(PASSWORD1);
+        Matcher matcher = pattern.matcher(password1);
         return matcher.matches();
     }
 
